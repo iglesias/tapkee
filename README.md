@@ -142,6 +142,18 @@ A minimal working example of a program that uses the library is:
 This example require Tapkee to be in the include path. With Linux compilers
 you may do that with the `-I/path/to/tapkee/headers/folder` key.
 
+Compilation with Conan
+-------
+
+From Tapkee's root directory:
+
+```
+mkdir build && cd build
+conan install ..
+cmake [definitions] ..
+cmake --build .
+```
+
 Integration
 -----------
 

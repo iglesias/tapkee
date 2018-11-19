@@ -2,6 +2,10 @@ project (Tapkee  LANGUAGES CXX)
 
 cmake_minimum_required (VERSION 3.3)
 
+# conan
+include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+conan_basic_setup()
+
 # set paths
 set (CMAKE_CXX_STANDARD 11)
 set (TAPKEE_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/include")
