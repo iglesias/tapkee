@@ -1,8 +1,11 @@
 name: Nanobind
 
 on:
+  # TODO update.
   push:
     branches: ["experiment/action-pip-nanobind"]
+  # pull_request:
+    # branches: [ ]
 
 jobs:
   build:
