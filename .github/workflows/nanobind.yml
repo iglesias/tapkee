@@ -19,11 +19,12 @@ jobs:
 
     - name: Install dependencies
       run: |
-        sudo apt-get install -y python3.11-dev
+        sudo apt-get install -y libarpack2-dev libcxxopts-dev libeigen3-dev libfmt-dev python3.11-dev 
         python -m pip install nanobind
 
     - name: Configure
       run: cmake -B ${{github.workspace}}/build -DBUILD_NANOBIND=ON
 
     - name: Build
+      # TODO there are A LOT of warnings in the logs from nanobind (-pedantic, -Wshadow).
       run: cmake --build ${{github.workspace}}/build
